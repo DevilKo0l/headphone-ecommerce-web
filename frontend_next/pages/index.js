@@ -7,13 +7,14 @@ const index = ({ productsData, bannerData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-      {console.log(bannerData)};
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {productsData.map((product) => product.name)}
+        {productsData?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
       </div>
       <FooterBanner />
     </>
