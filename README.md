@@ -24,6 +24,7 @@ The technologies I use in this project inclues:
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Sanity](https://www.sanity.io/manage)
+* [Stripe](https://stripe.com/en-pl)
 
 <!-- GETTING STARTED -->
 ## Getting Started
