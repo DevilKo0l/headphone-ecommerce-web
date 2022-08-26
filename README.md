@@ -15,7 +15,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a modern and responsive ecommerce website for selling headphone. This is a full stack project using many modern technology
+This is a full stack, modern and responsive ecommerce website for selling headphone using many new technologies
 
 ### Built With
 The technologies I use in this project inclues:
