@@ -7,7 +7,7 @@ export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [totalQuantities, setTotalQuantites] = useState(0);
+  const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
 
   let foundProduct;
@@ -22,7 +22,7 @@ export const StateContext = ({ children }) => {
       setTotalPrice(
         (prevTotalPrice) => prevTotalPrice + product.price * quantity
       );
-      setTotalQuantites(
+      setTotalQuantities(
         (prevTotalQuantities) => prevTotalQuantities + quantity
       );
 
@@ -50,7 +50,7 @@ export const StateContext = ({ children }) => {
       (prevTotalPrice) =>
         prevTotalPrice - foundProduct.price * foundProduct.quantity
     );
-    setTotalQuantites(
+    setTotalQuantities(
       (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
     );
 
@@ -66,7 +66,7 @@ export const StateContext = ({ children }) => {
         { ...foundProduct, quantity: foundProduct.quantity + 1 },
       ]);
       setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
-      setTotalQuantites((prevTotalQuantities) => prevTotalQuantities + 1);
+      setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
         setCartItems([
@@ -74,7 +74,7 @@ export const StateContext = ({ children }) => {
           { ...foundProduct, quantity: foundProduct.quantity - 1 },
         ]);
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
-        setTotalQuantites((prevTotalQuantities) => prevTotalQuantities - 1);
+        setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
       }
     }
   };
@@ -105,7 +105,7 @@ export const StateContext = ({ children }) => {
         onRemove,
         setCartItems,
         setTotalPrice,
-        setTotalQuantites,
+        setTotalQuantities,
       }}
     >
       {children}
